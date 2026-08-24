@@ -43,7 +43,6 @@ const { connect } = useConnect()
 const { disconnect } = useDisconnect()
 const [name, setName] = useState('')
 const [years, setYears] = useState(1)
-
 const { data: isAvailable, isLoading: checkingAvailable } = useReadContract({
 address: CONTRACT_ADDRESS,
 abi: BDNameServiceABI,
@@ -51,7 +50,33 @@ functionName: 'isAvailable',
 args: [name],
 query: { enabled: name.length > 0 },
 })
+const { data: owner1 } = useReadContract({
+    address: CONTRACT_ADDRESS,
+    abi: BDNameServiceABI,
+    functionName: 'getOwner',
+    args: ['mrahmanrumel'],
+  })
 
+  const { data: expiry1 } = useReadContract({
+    address: CONTRACT_ADDRESS,
+    abi: BDNameServiceABI,
+    functionName: 'getExpiry',
+    args: ['mrahmanrumel'],
+  })
+
+  const { data: owner2 } = useReadContract({
+    address: CONTRACT_ADDRESS,
+    abi: BDNameServiceABI,
+    functionName: 'getOwner',
+    args: ['fenchuganj'],
+  })
+
+  const { data: expiry2 } = useReadContract({
+    address: CONTRACT_ADDRESS,
+    abi: BDNameServiceABI,
+    functionName: 'getExpiry',
+    args: ['fenchuganj'],
+  })
 const { data: price, isLoading: checkingPrice } = useReadContract({
 address: CONTRACT_ADDRESS,
 abi: BDNameServiceABI,
@@ -284,7 +309,33 @@ opacity: isPending || isConfirming ? 0.7 : 1,
 <p style={{ marginTop: '16px', textAlign: 'center', fontSize: '14px', opacity: 0.6 }}>
 Connect wallet to register
 </p>
-)}
+)}{isConnected && (
+          <div style={{
+            marginTop: '20px',
+            background: 'rgba(255,255,255,0.06)',
+            borderRadius: '20px',
+            padding: '20px',
+            border: '1px solid rgba(255,255,255,0.1)',
+          }}>
+            <p style={{ margin: '0 0 12px', fontWeight: 600, fontSize: '16px' }}>My Domains</p>
+            {owner1 && address && String(owner1).toLowerCase() === address.toLowerCase() && (
+              <div style={{ marginBottom: '10px', padding: '12px', background: 'rgba(0,0,0,0.3)', borderRadius: '12px' }}>
+                <p style={{ margin: 0, fontWeight: 600 }}>mrahmanrumel<span style={{ color: '#60a5fa' }}>.bd</span></p>
+                <p style={{ margin: '4px 0 0', fontSize: '12px', opacity: 0.6 }}>
+                  Expires: {expiry1 ? new Date(Number(expiry1) * 1000).toLocaleDateString() : '...'}
+                </p>
+              </div>
+            )}
+            {owner2 && address && String(owner2).toLowerCase() === address.toLowerCase() && (
+              <div style={{ padding: '12px', background: 'rgba(0,0,0,0.3)', borderRadius: '12px' }}>
+                <p style={{ margin: 0, fontWeight: 600 }}>fenchuganj<span style={{ color: '#60a5fa' }}>.bd</span></p>
+                <p style={{ margin: '4px 0 0', fontSize: '12px', opacity: 0.6 }}>
+                  Expires: {expiry2 ? new Date(Number(expiry2) * 1000).toLocaleDateString() : '...'}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
 </div>
 )}
 </div>

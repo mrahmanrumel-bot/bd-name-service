@@ -15,7 +15,20 @@ name: "isAvailable",
 outputs: [{ internalType: "bool", name: "", type: "bool" }],
 stateMutability: "view",
 type: "function"
-},
+},{
+    name: 'getOwner',
+    type: 'function',
+    stateMutability: 'view',
+    inputs: [{ name: 'name', type: 'string' }],
+    outputs: [{ name: '', type: 'address' }],
+  },
+  {
+    name: 'getExpiry',
+    type: 'function',
+    stateMutability: 'view',
+    inputs: [{ name: 'name', type: 'string' }],
+    outputs: [{ name: '', type: 'uint256' }],
+  },
 {
 inputs: [
 { internalType: "string", name: "name", type: "string" },
