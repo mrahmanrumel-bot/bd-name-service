@@ -123,20 +123,34 @@ marginBottom: '32px',
 paddingTop: '10px',
 }}>
 <div>
-<h1 style={{ fontSize: '24px', margin: 0, fontWeight: 700 }}>BD Name Service</h1>
-<p style={{ margin: '4px 0 0', opacity: 0.6, fontSize: '13px' }}>.bd Domains on Base</p>
+  <h1 style={{
+    fontSize: '28px',
+    fontWeight: 700,
+    margin: 0,
+    letterSpacing: '-0.03em',
+  }}>
+    BD Name Service
+  </h1>
+  <p style={{
+    margin: '6px 0 0',
+    opacity: 0.75,
+    fontSize: '15px',
+  }}>
+    Your identity on Base. Search a .bd name.
+  </p>
 </div>
 {isConnected ? (
 <button
 onClick={() => disconnect()}
 style={{
-background: 'rgba(255,255,255,0.1)',
-border: '1px solid rgba(255,255,255,0.2)',
-color: 'white',
-padding: '10px 16px',
-borderRadius: '12px',
-fontSize: '13px',
-cursor: 'pointer',
+  width: '100%',
+  padding: '16px 18px',
+  borderRadius: '16px',
+  border: '1px solid rgba(255,255,255,0.15)',
+  background: 'rgba(15, 23, 42, 0.55)',
+  color: 'white',
+  fontSize: '18px',
+  outline: 'none',
 }}
 >
 {address?.slice(0, 6)}...{address?.slice(-4)}
@@ -228,11 +242,15 @@ border: '1px solid rgba(255,255,255,0.08)',
 </p>
 <p style={{ margin: 0, fontSize: '14px' }}>
 {checkingAvailable ? (
-<span style={{ opacity: 0.6 }}>Checking...</span>
+  <span style={{ opacity: 0.6 }}>Checking...</span>
 ) : isAvailable ? (
-<span style={{ color: '#4ade80' }}>Available</span>
+  <span style={{ color: '#34d399', fontWeight: 600, fontSize: '14px' }}>
+    Available
+  </span>
 ) : (
-<span style={{ color: '#f87171' }}>Already taken</span>
+  <span style={{ color: '#f87171', fontWeight: 600, fontSize: '14px' }}>
+    Already taken
+  </span>
 )}
 </p>
 </div>
@@ -253,21 +271,21 @@ border: '1px solid rgba(255,255,255,0.08)',
 {isConnected && isAvailable && (
 needsApproval ? (
 <button
-onClick={handleApprove}
-disabled={isPending || isConfirming}
-style={{
-width: '100%',
-marginTop: '18px',
-padding: '15px',
-borderRadius: '14px',
-border: 'none',
-background: 'linear-gradient(90deg, #f59e0b, #f97316)',
-color: 'white',
-fontWeight: 700,
-fontSize: '16px',
-cursor: 'pointer',
-opacity: isPending || isConfirming ? 0.7 : 1,
-}}
+  onClick={handleApprove}
+  disabled={isPending || isConfirming}
+  style={{
+    width: '100%',
+    marginTop: '18px',
+    padding: '16px',
+    borderRadius: '16px',
+    border: 'none',
+    background: '#f59e0b',
+    color: 'white',
+    fontWeight: 700,
+    fontSize: '16px',
+    cursor: 'pointer',
+    opacity: isPending || isConfirming ? 0.7 : 1,
+  }}
 >
 {isPending || isConfirming ? 'Approving...' : 'Approve BDT'}
 </button>
