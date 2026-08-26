@@ -8,35 +8,24 @@ useWriteContract,
 useWaitForTransactionReceipt,
 } from 'wagmi'
 import { injected } from 'wagmi/connectors'
-import { formatEther, maxUint256 } from 'viem'
+import { formatEther, } from 'viem'
 import { BDNameServiceABI } from './abi'
 
-const CONTRACT_ADDRESS = '0x4981657B5365D54F7096B3e15B95dB07cc8A2E56' as `0x${string}`
-const BDC_TOKEN = '0x92A4D9448Afe3DfEe7d8b3fa2CdD604eF5f3262F' as `0x${string}`
+const CONTRACT_ADDRESS = '0xe77F55593206bC969F0eA36990B2ADCE5866E5a3' as `0x${string}`
+const BDC_TOKEN = '0xDF14a4741Cd939f388C30Dd1A521384af5edf55f' as `0x${string}`
 
 const ERC20_ABI = [
-{
-name: 'approve',
-type: 'function',
-stateMutability: 'nonpayable',
-inputs: [
-{ name: 'spender', type: 'address' },
-{ name: 'amount', type: 'uint256' },
-],
-outputs: [{ type: 'bool' }],
-},
-{
-name: 'allowance',
-type: 'function',
-stateMutability: 'view',
-inputs: [
-{ name: 'owner', type: 'address' },
-{ name: 'spender', type: 'address' },
-],
-outputs: [{ type: 'uint256' }],
-},
+  {
+    name: 'approve',
+    type: 'function',
+    stateMutability: 'nonpayable',
+    inputs: [
+      { name: 'spender', type: 'address' },
+      { name: 'amount', type: 'uint256' },
+    ],
+    outputs: [{ name: '', type: 'bool' }],
+  },
 ] as const
-
 export default function App() {
 const { address, isConnected } = useAccount()
 const { connect } = useConnect()
@@ -81,7 +70,7 @@ const { data: price, isLoading: checkingPrice } = useReadContract({
 address: CONTRACT_ADDRESS,
 abi: BDNameServiceABI,
 functionName: 'getPrice',
-args: [name, BigInt(years)],
+args: [BigInt(years)],
 query: { enabled: name.length > 0 },
 })
 
@@ -96,25 +85,25 @@ query: { enabled: !!address },
 const { writeContract, data: hash, isPending } = useWriteContract()
 const { isLoading: isConfirming, isSuccess } = useWaitForTransactionReceipt({ hash })
 
-const needsApproval = price !== undefined && allowance !== undefined && allowance < price
+const needsApproval =
+  price !== undefined && (allowance === undefined || allowance < price)
 
 const handleApprove = () => {
-writeContract({
-address: BDC_TOKEN,
-abi: ERC20_ABI,
-functionName: 'approve',
-args: [CONTRACT_ADDRESS, maxUint256],
-})
+  writeContract({
+    address: BDC_TOKEN,
+    abi: ERC20_ABI,
+    functionName: 'approve',
+    args: [CONTRACT_ADDRESS, price!],
+  })
 }
 
 const handleRegister = () => {
-if (!name || !isAvailable) return
-writeContract({
-address: CONTRACT_ADDRESS,
-abi: BDNameServiceABI,
-functionName: 'register',
-args: [name, BigInt(years)],
-})
+  writeContract({
+    address: CONTRACT_ADDRESS,
+    abi: BDNameServiceABI,
+    functionName: 'register',
+    args: [name, BigInt(years)],
+  })
 }
 
 return (
@@ -300,7 +289,7 @@ cursor: 'pointer',
 opacity: isPending || isConfirming ? 0.7 : 1,
 }}
 >
-{isPending || isConfirming ? 'Confirming...' : isSuccess ? 'Registered!' : 'Register Now'}
+{isPending || isConfirming ? 'Confirming...' : isSuccess ? 'Registered!' : needsApproval ? 'Approve BDT' : 'Register Now'}
 </button>
 )
 )}
