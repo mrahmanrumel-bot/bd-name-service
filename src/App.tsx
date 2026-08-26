@@ -7,7 +7,7 @@ useReadContract,
 useWriteContract,
 useWaitForTransactionReceipt,
 } from 'wagmi'
-import { injected } from 'wagmi/connectors'
+
 import { formatEther, } from 'viem'
 import { BDNameServiceABI } from './abi'
 
@@ -28,7 +28,7 @@ const ERC20_ABI = [
 ] as const
 export default function App() {
 const { address, isConnected } = useAccount()
-const { connect } = useConnect()
+const { connect, connectors } = useConnect()
 const { disconnect } = useDisconnect()
 const [name, setName] = useState('')
 const [years, setYears] = useState(1)
@@ -140,37 +140,40 @@ paddingTop: '10px',
   </p>
 </div>
 {isConnected ? (
-<button
-onClick={() => disconnect()}
-style={{
-  width: '100%',
-  padding: '16px 18px',
-  borderRadius: '16px',
-  border: '1px solid rgba(255,255,255,0.15)',
-  background: 'rgba(15, 23, 42, 0.55)',
-  color: 'white',
-  fontSize: '18px',
-  outline: 'none',
-}}
->
-{address?.slice(0, 6)}...{address?.slice(-4)}
-</button>
+  <button
+    onClick={() => disconnect()}
+    style={{
+      padding: '10px 14px',
+      borderRadius: '12px',
+      border: '1px solid rgba(255,255,255,0.2)',
+      background: 'rgba(0,0,0,0.25)',
+      color: 'white',
+      cursor: 'pointer',
+    }}
+  >
+    {address?.slice(0, 6)}...{address?.slice(-4)}
+  </button>
 ) : (
-<button
-onClick={() => connect({ connector: injected() })}
-style={{
-background: '#2563eb',
-border: 'none',
-color: 'white',
-padding: '10px 18px',
-borderRadius: '12px',
-fontWeight: 600,
-fontSize: '14px',
-cursor: 'pointer',
-}}
->
-Connect Wallet
-</button>
+  <button
+    onClick={() => {
+      const inj = connectors.find((c) => c.id === 'injected')
+      const wc = connectors.find((c) => c.id === 'walletConnect')
+      const connector =
+        typeof window !== 'undefined' && (window as any).ethereum ? inj : wc
+      if (connector) connect({ connector })
+    }}
+    style={{
+      padding: '10px 14px',
+      borderRadius: '12px',
+      border: 'none',
+      background: '#2563eb',
+      color: 'white',
+      fontWeight: 600,
+      cursor: 'pointer',
+    }}
+  >
+    Connect Wallet
+  </button>
 )}
 </div>
 
