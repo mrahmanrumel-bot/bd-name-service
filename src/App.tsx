@@ -12,7 +12,7 @@ import { formatEther, } from 'viem'
 import { BDNameServiceABI } from './abi'
 
 const CONTRACT_ADDRESS = '0xe77F55593206bC969F0eA36990B2ADCE5866E5a3' as `0x${string}`
-const BDC_TOKEN = '0xDF14a4741Cd939f388C30Dd1A521384af5edf55f' as `0x${string}`
+const BDT_TOKEN = '0xDF14a4741Cd939f388C30Dd1A521384af5edf55f' as `0x${string}`
 
 const ERC20_ABI = [
   {
@@ -75,7 +75,7 @@ query: { enabled: name.length > 0 },
 })
 
 const { data: allowance } = useReadContract({
-address: BDC_TOKEN,
+address: BDT_TOKEN,
 abi: ERC20_ABI,
 functionName: 'allowance',
 args: address ? [address, CONTRACT_ADDRESS] : undefined,
@@ -90,7 +90,7 @@ const needsApproval =
 
 const handleApprove = () => {
   writeContract({
-    address: BDC_TOKEN,
+    address: BDT_TOKEN,
     abi: ERC20_ABI,
     functionName: 'approve',
     args: [CONTRACT_ADDRESS, price!],
@@ -244,7 +244,7 @@ border: '1px solid rgba(255,255,255,0.08)',
 <p style={{ fontSize: '20px', fontWeight: 700, margin: 0 }}>
 {Number(formatEther(price)).toLocaleString()}
 </p>
-<p style={{ margin: 0, fontSize: '12px', opacity: 0.6 }}>BDC</p>
+<p style={{ margin: 0, fontSize: '12px', opacity: 0.6 }}>BDT</p>
 </>
 ) : null}
 </div>
@@ -269,7 +269,7 @@ cursor: 'pointer',
 opacity: isPending || isConfirming ? 0.7 : 1,
 }}
 >
-{isPending || isConfirming ? 'Approving...' : 'Approve BDC'}
+{isPending || isConfirming ? 'Approving...' : 'Approve BDT'}
 </button>
 ) : (
 <button
@@ -342,7 +342,8 @@ opacity: 0.7,
 </div>
 
 <p style={{ textAlign: 'center', marginTop: '30px', opacity: 0.4, fontSize: '12px' }}>
-Powered by BDCoin • Built on Base
+Powered by BDT
+oin • Built on Base
 </p>
 </div>
 </div>
