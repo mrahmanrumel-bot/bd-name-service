@@ -342,8 +342,7 @@ opacity: 0.7,
 </div>
 
 <p style={{ textAlign: 'center', marginTop: '30px', opacity: 0.4, fontSize: '12px' }}>
-Powered by BDT
-oin • Built on Base
+Powered by BDT • Built on Base
 </p>
 </div>
 </div>
