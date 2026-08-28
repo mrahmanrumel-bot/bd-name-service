@@ -11,7 +11,7 @@ useWaitForTransactionReceipt,
 import { formatEther, } from 'viem'
 import { BDNameServiceABI } from './abi'
 
-const CONTRACT_ADDRESS = '0xe77F55593206bC969F0eA36990B2ADCE5866E5a3' as `0x${string}`
+ const CONTRACT_ADDRESS = '0x3C372b5123fA6D4A58A8C7E1F6be3FbCC0A7E3DF'as `0x${string}`
 const BDT_TOKEN = '0xDF14a4741Cd939f388C30Dd1A521384af5edf55f' as `0x${string}`
 
 const ERC20_ABI = [
