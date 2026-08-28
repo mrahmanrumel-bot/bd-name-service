@@ -9,7 +9,7 @@ export const BDNameServiceABI = [
   },
   {
     inputs: [{ name: 'name', type: 'string' }],
-    name: 'isAvailable',
+    name: 'available',
     outputs: [{ name: '', type: 'bool' }],
     stateMutability: 'view',
     type: 'function',

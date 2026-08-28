@@ -35,7 +35,7 @@ const [years, setYears] = useState(1)
 const { data: isAvailable, isLoading: checkingAvailable } = useReadContract({
 address: CONTRACT_ADDRESS,
 abi: BDNameServiceABI,
-functionName: 'isAvailable',
+functionName: 'available',
 args: [name],
 query: { enabled: name.length > 0 },
 })
