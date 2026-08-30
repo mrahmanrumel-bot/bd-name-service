@@ -5,7 +5,7 @@
 		return;
 	}
 
-	var state = { lang: tripdeshData.lang || 'en', history: [] };
+	var state = { lang: tripdeshData.lang || 'bn', history: [] };
 
 	function initChat() {
 		var form = document.getElementById('tripdesh-ai-chat-form');
@@ -97,7 +97,7 @@
 					submitBtn.disabled = false;
 					if (result.ok) {
 						resultEl.className = 'tripdesh-booking-form__result tripdesh-booking-form__result--success';
-						resultEl.textContent = result.data.message + ' (' + result.data.reference + ')';
+						resultEl.textContent = result.data.message + ' ' + tripdeshData.i18n.bookingNumber + ': ' + result.data.reference;
 						form.reset();
 					} else {
 						resultEl.className = 'tripdesh-booking-form__result tripdesh-booking-form__result--error';

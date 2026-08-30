@@ -25,13 +25,14 @@ class Tripdesh_Shortcodes {
 			array(
 				'restUrl' => esc_url_raw( rest_url( 'tripdesh/v1' ) ),
 				'nonce'   => wp_create_nonce( 'wp_rest' ),
-				'lang'    => 'en',
+				'lang'    => 'bn',
 				'i18n'    => array(
-					'sending'       => __( 'Sending…', 'tripdesh' ),
-					'thinking'      => __( 'Thinking…', 'tripdesh' ),
-					'error'         => __( 'Something went wrong. Please try again.', 'tripdesh' ),
-					'send'          => __( 'Send', 'tripdesh' ),
-					'bookingFailed' => __( 'Booking request failed.', 'tripdesh' ),
+					'sending'        => __( 'Sending…', 'tripdesh' ),
+					'thinking'       => __( 'Thinking…', 'tripdesh' ),
+					'error'          => __( 'Something went wrong. Please try again.', 'tripdesh' ),
+					'send'           => __( 'Send', 'tripdesh' ),
+					'bookingFailed'  => __( 'Booking request failed.', 'tripdesh' ),
+					'bookingNumber'  => __( 'Your booking number', 'tripdesh' ),
 				),
 			)
 		);
@@ -45,8 +46,8 @@ class Tripdesh_Shortcodes {
 			<div class="tripdesh-ai-chat__header">
 				<span><?php esc_html_e( 'Tripdesh AI Travel Assistant', 'tripdesh' ); ?></span>
 				<div class="tripdesh-ai-chat__lang">
-					<button type="button" data-lang="en" class="active">EN</button>
-					<button type="button" data-lang="bn">বাংলা</button>
+					<button type="button" data-lang="bn" class="active">বাংলা</button>
+					<button type="button" data-lang="en">EN</button>
 				</div>
 			</div>
 			<div class="tripdesh-ai-chat__messages" id="tripdesh-ai-chat-messages">
@@ -78,14 +79,25 @@ class Tripdesh_Shortcodes {
 				<input type="date" id="tripdesh-search-date" name="date" />
 			</div>
 			<div class="tripdesh-search__field">
-				<label for="tripdesh-search-travelers"><?php esc_html_e( 'Travelers', 'tripdesh' ); ?></label>
+				<label for="tripdesh-search-travelers"><?php esc_html_e( 'How many travelers?', 'tripdesh' ); ?></label>
 				<input type="number" id="tripdesh-search-travelers" name="travelers" min="1" value="2" />
 			</div>
 			<div class="tripdesh-search__field">
 				<label for="tripdesh-search-budget"><?php esc_html_e( 'Budget (BDT)', 'tripdesh' ); ?></label>
 				<input type="number" id="tripdesh-search-budget" name="budget" min="0" step="1000" placeholder="30000" />
 			</div>
-			<button type="submit" class="tripdesh-search__submit"><?php esc_html_e( 'Search', 'tripdesh' ); ?></button>
+			<div class="tripdesh-search__field">
+				<label for="tripdesh-search-style"><?php esc_html_e( 'Travel Type', 'tripdesh' ); ?></label>
+				<select id="tripdesh-search-style" name="travel_style">
+					<option value=""><?php esc_html_e( 'Any', 'tripdesh' ); ?></option>
+					<?php foreach ( get_terms( array( 'taxonomy' => 'travel_style', 'hide_empty' => false ) ) as $term ) : ?>
+						<?php if ( ! is_wp_error( $term ) ) : ?>
+							<option value="<?php echo esc_attr( $term->slug ); ?>"><?php echo esc_html( $term->name ); ?></option>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</select>
+			</div>
+			<button type="submit" class="tripdesh-search__submit"><?php esc_html_e( 'Search Trips', 'tripdesh' ); ?></button>
 		</form>
 		<?php
 		return ob_get_clean();

@@ -1,0 +1,432 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tripdesh 1.0\n"
+"POT-Creation-Date: 2026-08-30\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bn_BD\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "A new booking request has come in.\n\nReview it here: %s"
+msgstr "নতুন একটি বুকিং অনুরোধ এসেছে।\n\nবিস্তারিত দেখুন এখানে: %s"
+
+msgid "Cox's Bazar, Sylhet…"
+msgstr "কক্সবাজার, সিলেট…"
+
+msgid "Hi %1$s,\n\nThanks for your booking request. Your reference is %2$s.\n\nOur team will confirm availability and reach out to arrange payment. If you have questions, reply to this email.\n\n— Tripdesh"
+msgstr "প্রিয় %1$s,\n\nআপনার বুকিং অনুরোধের জন্য ধন্যবাদ। আপনার রেফারেন্স নম্বর: %2$s।\n\nআমাদের টিম প্রাপ্যতা যাচাই করে পেমেন্টের ব্যবস্থার জন্য যোগাযোগ করবে। কোনো প্রশ্ন থাকলে এই ইমেইলে উত্তর দিন।\n\n— ট্রিপদেশ"
+
+msgid "Hi! Tell me your budget, number of days, and who you're travelling with, and I'll suggest destinations in Bangladesh."
+msgstr "হাই! আপনার বাজেট, কত দিনের ভ্রমণ এবং কাদের সাথে যাচ্ছেন তা জানান, আমি বাংলাদেশের সেরা গন্তব্য সাজেস্ট করবো।"
+
+msgid "AI Concierge"
+msgstr "AI কনসিয়ার্জ"
+
+msgid "API Key"
+msgstr "API কী"
+
+msgid "Activities"
+msgstr "অভিজ্ঞতা"
+
+msgid "Activity"
+msgstr "অভিজ্ঞতা"
+
+msgid "Add New %s"
+msgstr "নতুন %s যুক্ত করুন"
+
+msgid "Address"
+msgstr "ঠিকানা"
+
+msgid "Amenities"
+msgstr "সুযোগ-সুবিধা"
+
+msgid "Any"
+msgstr "যেকোনো"
+
+msgid "Availability Notes"
+msgstr "প্রাপ্যতা সংক্রান্ত তথ্য"
+
+msgid "Awaiting Payment"
+msgstr "পেমেন্টের অপেক্ষায়"
+
+msgid "Bangla Demo Content"
+msgstr "বাংলা ডেমো কনটেন্ট"
+
+msgid "Best Time to Visit"
+msgstr "ভ্রমণের সেরা সময়"
+
+msgid "Booking Status"
+msgstr "বুকিং স্ট্যাটাস"
+
+msgid "Booking Summary"
+msgstr "বুকিং সারসংক্ষেপ"
+
+msgid "Booking request failed."
+msgstr "বুকিং অনুরোধ ব্যর্থ হয়েছে।"
+
+msgid "Booking"
+msgstr "বুকিং"
+
+msgid "Bookings are captured without payment until a gateway is implemented against these settings. See ARCHITECTURE.md."
+msgstr "পেমেন্ট গেটওয়ে চালু না হওয়া পর্যন্ত বুকিং কোনো পেমেন্ট ছাড়াই গ্রহণ করা হয়। বিস্তারিত দেখুন ARCHITECTURE.md-এ।"
+
+msgid "Bookings"
+msgstr "বুকিংসমূহ"
+
+msgid "Budget (BDT)"
+msgstr "বাজেট (টাকা)"
+
+msgid "Business Info"
+msgstr "ব্যবসায়িক তথ্য"
+
+msgid "Cancelled"
+msgstr "বাতিল হয়েছে"
+
+msgid "Confirm manually once payment is verified. Automated status transitions arrive with the Phase 2 payment gateway."
+msgstr "পেমেন্ট নিশ্চিত হলে হাতে-কলমে স্ট্যাটাস কনফার্ম করুন। পেমেন্ট গেটওয়ে চালু হলে (দ্বিতীয় ধাপে) এটি স্বয়ংক্রিয় হবে।"
+
+msgid "Confirmed"
+msgstr "নিশ্চিত হয়েছে"
+
+msgid "Contact Email"
+msgstr "যোগাযোগের ইমেইল"
+
+msgid "Contact Phone"
+msgstr "যোগাযোগের ফোন নম্বর"
+
+msgid "Could not create the booking. Please try again."
+msgstr "বুকিং তৈরি করা যায়নি। আবার চেষ্টা করুন।"
+
+msgid "Creates the 21 core Bangladesh destinations (Bengali titles, English URL slugs) if they do not already exist, and tags the Sylhet tea-garden group for the homepage featured section. Safe to run more than once — existing destinations (matched by slug) are never modified or duplicated."
+msgstr "বাংলাদেশের ২১টি মূল গন্তব্য (বাংলা শিরোনাম, ইংরেজি URL স্লাগসহ) তৈরি করে, যদি সেগুলো আগে থেকে না থাকে, এবং হোমপেজের ফিচার্ড সেকশনের জন্য সিলেটের চা-বাগান গ্রুপ ট্যাগ করে দেয়। একাধিকবার চালানো নিরাপদ — বিদ্যমান গন্তব্য (স্লাগ অনুযায়ী মিলিয়ে) কখনও পরিবর্তন বা ডুপ্লিকেট করা হয় না।"
+
+msgid "Currency"
+msgstr "মুদ্রা"
+
+msgid "Customer Name"
+msgstr "গ্রাহকের নাম"
+
+msgid "Customer Price (BDT, per person)"
+msgstr "গ্রাহক মূল্য (টাকা, জনপ্রতি)"
+
+msgid "Customer"
+msgstr "গ্রাহক"
+
+msgid "Day-by-Day Itinerary"
+msgstr "দিনভিত্তিক ভ্রমণ পরিকল্পনা"
+
+msgid "Departure Location"
+msgstr "যাত্রা শুরুর স্থান"
+
+msgid "Destination"
+msgstr "গন্তব্য"
+
+msgid "Destinations"
+msgstr "গন্তব্যসমূহ"
+
+msgid "Duration (days)"
+msgstr "সময়কাল (দিন)"
+
+msgid "Duration (nights)"
+msgstr "সময়কাল (রাত)"
+
+msgid "Duration"
+msgstr "সময়কাল"
+
+msgid "Edit %s"
+msgstr "%s সম্পাদনা করুন"
+
+msgid "Email"
+msgstr "ইমেইল"
+
+msgid "Estimated Budget (BDT, per person)"
+msgstr "আনুমানিক বাজেট (টাকা, জনপ্রতি)"
+
+msgid "Exclusions"
+msgstr "যা অন্তর্ভুক্ত নয়"
+
+msgid "Featured Collection Key (e.g. tea_garden)"
+msgstr "ফিচার্ড কালেকশন কী (যেমন: tea_garden)"
+
+msgid "Food"
+msgstr "খাবার"
+
+msgid "From"
+msgstr "থেকে"
+
+msgid "Full Name"
+msgstr "পূর্ণ নাম"
+
+msgid "Gateway"
+msgstr "গেটওয়ে"
+
+msgid "Hotel"
+msgstr "হোটেল"
+
+msgid "Hotels"
+msgstr "হোটেল"
+
+msgid "How many travelers?"
+msgstr "কতজন ভ্রমণ করবেন?"
+
+msgid "How to Reach"
+msgstr "কীভাবে যাবেন"
+
+msgid "Import Bangla Demo Destinations"
+msgstr "বাংলা ডেমো গন্তব্য ইমপোর্ট করুন"
+
+msgid "Inclusions"
+msgstr "যা অন্তর্ভুক্ত থাকছে"
+
+msgid "Invalid request body."
+msgstr "অনুরোধের তথ্য সঠিক নয়।"
+
+msgid "Leave the API key blank to keep the AI concierge in fallback mode (a friendly bilingual message instead of live recommendations). The key is used server-side only and never sent to the browser."
+msgstr "API কী খালি রাখলে AI কনসিয়ার্জ ফলব্যাক মোডে থাকবে (লাইভ সাজেশনের বদলে একটি বন্ধুত্বপূর্ণ দ্বিভাষিক বার্তা দেখাবে)। কী শুধুমাত্র সার্ভার সাইডে ব্যবহৃত হয়, ব্রাউজারে কখনো পাঠানো হয় না।"
+
+msgid "Local Transportation"
+msgstr "স্থানীয় যাতায়াত"
+
+msgid "Location"
+msgstr "অবস্থান"
+
+msgid "Locations"
+msgstr "অবস্থানসমূহ"
+
+msgid "Max Travelers per Booking"
+msgstr "প্রতি বুকিংয়ে সর্বোচ্চ ভ্রমণকারী"
+
+msgid "Message is too long."
+msgstr "বার্তাটি অনেক বড়।"
+
+msgid "Mode (bus/train/car/microbus/boat/launch)"
+msgstr "ধরন (বাস/ট্রেন/গাড়ি/মাইক্রোবাস/নৌকা/লঞ্চ)"
+
+msgid "Model"
+msgstr "মডেল"
+
+msgid "New booking request — %s"
+msgstr "নতুন বুকিং অনুরোধ — %s"
+
+msgid "No %s found"
+msgstr "কোনো %s পাওয়া যায়নি"
+
+msgid "No payment is taken now. Our team will confirm availability and follow up with payment instructions."
+msgstr "এখনই কোনো পেমেন্ট নেওয়া হচ্ছে না। আমাদের টিম প্রাপ্যতা নিশ্চিত করে পেমেন্টের নির্দেশনা জানাবে।"
+
+msgid "None (manual confirmation)"
+msgstr "কোনোটি না (হাতে-কলমে নিশ্চিতকরণ)"
+
+msgid "Notes (optional)"
+msgstr "মন্তব্য (ঐচ্ছিক)"
+
+msgid "Notes"
+msgstr "মন্তব্য"
+
+msgid "Number of Travelers"
+msgstr "ভ্রমণকারীর সংখ্যা"
+
+msgid "One line per day: \"Day N: description\". Rendered as a numbered itinerary on the front end."
+msgstr "প্রতিদিনের জন্য একটি লাইন: \"Day N: বিবরণ\"। ফ্রন্ট-এন্ডে ক্রমিক আকারে দেখানো হবে।"
+
+msgid "Operator"
+msgstr "অপারেটর"
+
+msgid "Payment Gateway (Phase 2)"
+msgstr "পেমেন্ট গেটওয়ে (দ্বিতীয় ধাপ)"
+
+msgid "Pending"
+msgstr "অপেক্ষমাণ"
+
+msgid "Phone"
+msgstr "ফোন"
+
+msgid "Please enter a message."
+msgstr "একটি বার্তা লিখুন।"
+
+msgid "Please provide your name, a valid phone number, and a valid email address."
+msgstr "অনুগ্রহ করে আপনার নাম, সঠিক ফোন নম্বর এবং সঠিক ইমেইল ঠিকানা দিন।"
+
+msgid "Policies (check-in/out, cancellation)"
+msgstr "নীতিমালা (চেক-ইন/আউট, বাতিলকরণ)"
+
+msgid "Price (BDT)"
+msgstr "মূল্য (টাকা)"
+
+msgid "Price (BDT, per person)"
+msgstr "মূল্য (টাকা, জনপ্রতি)"
+
+msgid "Price per Night (BDT)"
+msgstr "প্রতি রাতের মূল্য (টাকা)"
+
+msgid "Product"
+msgstr "পণ্য"
+
+msgid "Provider"
+msgstr "প্রোভাইডার"
+
+msgid "Rating (1-5)"
+msgstr "রেটিং (১-৫)"
+
+msgid "Recommended Trip Length (days)"
+msgstr "প্রস্তাবিত ভ্রমণকাল (দিন)"
+
+msgid "Reference"
+msgstr "রেফারেন্স"
+
+msgid "Request Booking"
+msgstr "বুকিং নিশ্চিত করুন"
+
+msgid "Request to Book"
+msgstr "এখনই বুক করুন"
+
+msgid "Room Types"
+msgstr "রুমের ধরন"
+
+msgid "SSLCommerz Store ID"
+msgstr "SSLCommerz স্টোর আইডি"
+
+msgid "SSLCommerz Store Password"
+msgstr "SSLCommerz স্টোর পাসওয়ার্ড"
+
+msgid "Safety Information"
+msgstr "নিরাপত্তা তথ্য"
+
+msgid "Sandbox Mode"
+msgstr "স্যান্ডবক্স মোড"
+
+msgid "Search %s"
+msgstr "%s খুঁজুন"
+
+msgid "Search Trips"
+msgstr "ভ্রমণ খুঁজুন"
+
+msgid "Send"
+msgstr "পাঠান"
+
+msgid "Sending…"
+msgstr "পাঠানো হচ্ছে…"
+
+msgid "Something went wrong. Please try again."
+msgstr "কিছু একটা ভুল হয়েছে। আবার চেষ্টা করুন।"
+
+msgid "Star Rating (1-5)"
+msgstr "স্টার রেটিং (১-৫)"
+
+msgid "Supplier Price (BDT, internal)"
+msgstr "সরবরাহকারী মূল্য (টাকা, অভ্যন্তরীণ)"
+
+msgid "Terms & Conditions"
+msgstr "শর্তাবলী"
+
+msgid "Testimonial"
+msgstr "প্রতিক্রিয়া"
+
+msgid "Testimonials"
+msgstr "প্রতিক্রিয়াসমূহ"
+
+msgid "The selected tour, hotel, or activity could not be found."
+msgstr "নির্বাচিত ট্যুর, হোটেল বা অভিজ্ঞতাটি খুঁজে পাওয়া যায়নি।"
+
+msgid "Things to Do"
+msgstr "যা করবেন"
+
+msgid "Thinking…"
+msgstr "ভাবছি…"
+
+msgid "To"
+msgstr "পর্যন্ত"
+
+msgid "Too many requests. Please try again shortly."
+msgstr "অনেকবার অনুরোধ করা হয়েছে। কিছুক্ষণ পর আবার চেষ্টা করুন।"
+
+msgid "Total Price"
+msgstr "সর্বমোট মূল্য"
+
+msgid "Tour Package"
+msgstr "ট্যুর প্যাকেজ"
+
+msgid "Tour Packages"
+msgstr "ট্যুর প্যাকেজ"
+
+msgid "Tour Tier"
+msgstr "ট্যুর মান"
+
+msgid "Tour Tiers"
+msgstr "ট্যুর মানসমূহ"
+
+msgid "Transport Option"
+msgstr "যাতায়াত অপশন"
+
+msgid "Transportation"
+msgstr "যাতায়াত"
+
+msgid "Travel Date"
+msgstr "ভ্রমণের তারিখ"
+
+msgid "Travel Style"
+msgstr "ভ্রমণের ধরন"
+
+msgid "Travel Styles"
+msgstr "ভ্রমণের ধরনসমূহ"
+
+msgid "Travel Type"
+msgstr "ভ্রমণের ধরন"
+
+msgid "Travelers"
+msgstr "ভ্রমণকারী"
+
+msgid "Trip Taken"
+msgstr "ভ্রমণকৃত ট্রিপ"
+
+msgid "Tripdesh AI Travel Assistant"
+msgstr "ট্রিপদেশ AI ভ্রমণ সহকারী"
+
+msgid "Tripdesh Details"
+msgstr "ট্রিপদেশ বিস্তারিত তথ্য"
+
+msgid "Tripdesh Settings"
+msgstr "ট্রিপদেশ সেটিংস"
+
+msgid "Tripdesh booking request received — %s"
+msgstr "ট্রিপদেশ বুকিং অনুরোধ গৃহীত হয়েছে — %s"
+
+msgid "Tripdesh"
+msgstr "ট্রিপদেশ"
+
+msgid "Use sandbox/test credentials"
+msgstr "স্যান্ডবক্স/টেস্ট ক্রেডেনশিয়াল ব্যবহার করুন"
+
+msgid "View %s"
+msgstr "%s দেখুন"
+
+msgid "What's Included"
+msgstr "যা অন্তর্ভুক্ত থাকছে"
+
+msgid "WhatsApp Number"
+msgstr "হোয়াটসঅ্যাপ নম্বর"
+
+msgid "Where to Stay"
+msgstr "কোথায় থাকবেন"
+
+msgid "You are not allowed to do this."
+msgstr "এই কাজটি করার অনুমতি আপনার নেই।"
+
+msgid "Your booking number"
+msgstr "আপনার বুকিং নম্বর"
+
+msgid "Your request has been received. Our team will confirm availability and contact you shortly."
+msgstr "বুকিং সফল হয়েছে! আপনার অনুরোধ গৃহীত হয়েছে। আমাদের টিম প্রাপ্যতা যাচাই করে শীঘ্রই যোগাযোগ করবে।"
+
+msgid "e.g. 3 days, 20,000 BDT, family from Dhaka…"
+msgstr "যেমন: ৩ দিন, ২০,০০০ টাকা, ঢাকা থেকে পরিবার নিয়ে…"
+
+msgid "per person"
+msgstr "জনপ্রতি"
+
+msgid "%d destination created."
+msgid_plural "%d destinations created."
+msgstr[0] "%d টি গন্তব্য তৈরি হয়েছে।"
+msgstr[1] "%d টি গন্তব্য তৈরি হয়েছে।"
+

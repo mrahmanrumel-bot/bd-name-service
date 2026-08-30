@@ -9,6 +9,14 @@ $tours        = get_posts( array( 'post_type' => 'tour_package', 'posts_per_page
 $hotels       = get_posts( array( 'post_type' => 'hotel', 'posts_per_page' => 4 ) );
 $testimonials = get_posts( array( 'post_type' => 'testimonial', 'posts_per_page' => 6 ) );
 $guides       = get_posts( array( 'post_type' => 'post', 'posts_per_page' => 3 ) );
+$tea_garden   = get_posts(
+	array(
+		'post_type'      => 'destination',
+		'posts_per_page' => 6,
+		'meta_key'       => '_tripdesh_featured_collection',
+		'meta_value'     => 'tea_garden',
+	)
+);
 
 $family_tours    = get_posts( array( 'post_type' => 'tour_package', 'posts_per_page' => 3, 'tax_query' => array( array( 'taxonomy' => 'travel_style', 'field' => 'slug', 'terms' => 'family' ) ) ) );
 $couple_tours    = get_posts( array( 'post_type' => 'tour_package', 'posts_per_page' => 3, 'tax_query' => array( array( 'taxonomy' => 'travel_style', 'field' => 'slug', 'terms' => 'couple' ) ) ) );
@@ -18,8 +26,9 @@ $weekend_tours   = get_posts( array( 'post_type' => 'tour_package', 'posts_per_p
 
 <section class="tripdesh-hero">
 	<div class="tripdesh-container tripdesh-hero__inner">
-		<h1 class="tripdesh-hero__title"><?php esc_html_e( 'Where do you want to go?', 'tripdesh' ); ?></h1>
-		<p class="tripdesh-hero__subtitle"><?php esc_html_e( "Discover Bangladesh — Cox's Bazar, Sylhet, Bandarban, Sundarbans, Sajek and beyond. Plan, compare, and book in minutes.", 'tripdesh' ); ?></p>
+		<h1 class="tripdesh-hero__title"><?php esc_html_e( 'Travel Bangladesh, with Tripdesh', 'tripdesh' ); ?></h1>
+		<p class="tripdesh-hero__subtitle"><?php esc_html_e( 'Find the best travel experiences in Bangladesh, matched to your budget, time, and taste.', 'tripdesh' ); ?></p>
+		<h2 class="tripdesh-hero__search-heading"><?php esc_html_e( 'Where do you want to go?', 'tripdesh' ); ?></h2>
 		<?php echo do_shortcode( '[tripdesh_search]' ); ?>
 	</div>
 </section>
@@ -32,6 +41,22 @@ $weekend_tours   = get_posts( array( 'post_type' => 'tour_package', 'posts_per_p
 	</div>
 	<div class="tripdesh-card-grid">
 		<?php foreach ( $destinations as $d ) : tripdesh_render_card( $d ); endforeach; ?>
+	</div>
+</section>
+<?php endif; ?>
+
+<?php if ( $tea_garden ) : ?>
+<section class="tripdesh-section tripdesh-section--tea">
+	<div class="tripdesh-container">
+		<div class="tripdesh-section__header">
+			<div>
+				<span class="tripdesh-badge"><?php esc_html_e( "Sylhet's Tea Gardens", 'tripdesh' ); ?></span>
+				<h2><?php esc_html_e( 'Travel to the Land of Tea', 'tripdesh' ); ?></h2>
+			</div>
+		</div>
+		<div class="tripdesh-card-grid">
+			<?php foreach ( $tea_garden as $d ) : tripdesh_render_card( $d ); endforeach; ?>
+		</div>
 	</div>
 </section>
 <?php endif; ?>

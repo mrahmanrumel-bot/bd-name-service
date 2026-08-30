@@ -130,14 +130,45 @@ Sitemap/robots.txt: delegated to WordPress core's built-in XML sitemaps
 (5.5+) rather than reimplemented — it already covers these CPTs once they're
 registered with `show_in_rest` + public.
 
-## 7. Bengali/English
+## 7. Bengali/English — Bangla-first
 
-Theme and plugin are translation-ready (`text domain: tripdesh`, all
-user-facing strings wrapped in `__()`/`_e()`). Recommended production setup:
-WPML or Polylang for full bilingual content (brief §12, §23) — not bundled,
-since it's a licensing/config decision for the site owner, not code. The AI
-concierge accepts a `language` field (`bn`/`en`) independent of the content
-language plugin.
+The site is Bangla-first: the front end (theme, plugin shortcodes, and
+REST API responses) is forced to the `bn_BD` locale regardless of the
+site's admin-configured language, via a `locale`/`determine_locale` filter
+in `tripdesh-core.php` scoped to `! is_admin()`. wp-admin is intentionally
+left on whatever locale the site owner actually uses — per the brief,
+"the admin dashboard can remain English if necessary for technical
+usability" — because admin and front-end share the same `tripdesh` text
+domain but are only translated for whichever locale is actually active in
+each context.
+
+All user-facing strings are wrapped in `__()`/`_e()` (text domain
+`tripdesh`), with hand-written professional Bengali translations shipped
+as `languages/tripdesh-bn_BD.mo` in both the theme and the plugin (source
+of truth: `tools/build-translations.php`, since there's no gettext
+toolchain in this environment — see that file's docblock to regenerate).
+Two categories of content are Bengali by construction rather than via
+gettext, because they're stored data, not template strings, and gettext
+only translates the latter:
+
+- **Taxonomy terms** (tour tiers, travel styles) are seeded in Bengali
+  directly (`Tripdesh_Taxonomies::seed_default_terms()`), with English
+  slugs for clean URLs.
+- **Destination content** (the 21 core Bangladesh destinations) is
+  optionally seeded via an idempotent, admin-triggered importer
+  (`Tripdesh_Demo_Content`) rather than baked into activation, so it never
+  silently overwrites a site's real content.
+
+The AI concierge's `language` field independently controls which language
+*it* replies in (default `bn`), separate from the site-wide locale — a
+visitor can toggle the chat widget to English without that affecting the
+rest of the page, which is why the concierge's own English fallback
+message is deliberately excluded from the bn_BD translation file (see
+`tools/build-translations.php`).
+
+For full bilingual *content* (an actual English version of pages you
+write, not just UI chrome), install WPML or Polylang (brief §12, §23) —
+not bundled, since it's a licensing/config decision for the site owner.
 
 ## 8. Payments — architecture, not implementation
 

@@ -36,6 +36,7 @@ class Tripdesh_Meta_Boxes {
 				'safety_info'         => array( __( 'Safety Information', 'tripdesh' ), 'textarea' ),
 				'local_transport'     => array( __( 'Local Transportation', 'tripdesh' ), 'textarea' ),
 				'recommended_days'    => array( __( 'Recommended Trip Length (days)', 'tripdesh' ), 'number' ),
+				'featured_collection' => array( __( 'Featured Collection Key (e.g. tea_garden)', 'tripdesh' ), 'text' ),
 			),
 			'tour_package'       => array(
 				'duration_days'      => array( __( 'Duration (days)', 'tripdesh' ), 'number' ),

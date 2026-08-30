@@ -17,6 +17,28 @@ define( 'TRIPDESH_CORE_VERSION', '1.0.0' );
 define( 'TRIPDESH_CORE_PATH', plugin_dir_path( __FILE__ ) );
 define( 'TRIPDESH_CORE_URL', plugin_dir_url( __FILE__ ) );
 
+/**
+ * Tripdesh is a Bangla-first customer-facing site: the front end (including
+ * REST API responses) always renders in Bengali, regardless of the site's
+ * configured admin language, so wp-admin stays whatever locale the site
+ * owner actually uses (usually English, "for technical usability" per the
+ * brief). Registered at top-level so it's in place before WordPress loads
+ * any translation file, including its own core strings.
+ *
+ * This only supplies Bengali for strings this theme/plugin ship a bn_BD
+ * .mo file for (see languages/) — WordPress core's own UI strings (e.g.
+ * "Older posts", comment form labels) need the WP core Bengali language
+ * pack too; see README.md for that one manual step.
+ */
+function tripdesh_force_frontend_locale( $locale ) {
+	if ( is_admin() ) {
+		return $locale;
+	}
+	return 'bn_BD';
+}
+add_filter( 'locale', 'tripdesh_force_frontend_locale' );
+add_filter( 'determine_locale', 'tripdesh_force_frontend_locale' );
+
 require_once TRIPDESH_CORE_PATH . 'includes/class-post-types.php';
 require_once TRIPDESH_CORE_PATH . 'includes/class-taxonomies.php';
 require_once TRIPDESH_CORE_PATH . 'includes/class-meta-boxes.php';
@@ -27,6 +49,7 @@ require_once TRIPDESH_CORE_PATH . 'includes/class-ai-concierge.php';
 require_once TRIPDESH_CORE_PATH . 'includes/class-rest-api.php';
 require_once TRIPDESH_CORE_PATH . 'includes/class-seo-schema.php';
 require_once TRIPDESH_CORE_PATH . 'includes/class-shortcodes.php';
+require_once TRIPDESH_CORE_PATH . 'includes/class-demo-content.php';
 
 /**
  * Bootstraps all plugin components. Each class wires its own hooks in its
@@ -48,6 +71,7 @@ final class Tripdesh_Core {
 	public Tripdesh_REST_Api $rest_api;
 	public Tripdesh_SEO_Schema $seo_schema;
 	public Tripdesh_Shortcodes $shortcodes;
+	public Tripdesh_Demo_Content $demo_content;
 
 	public static function instance(): Tripdesh_Core {
 		if ( null === self::$instance ) {
@@ -67,6 +91,7 @@ final class Tripdesh_Core {
 		$this->rest_api        = new Tripdesh_REST_Api( $this->booking, $this->ai_concierge );
 		$this->seo_schema      = new Tripdesh_SEO_Schema();
 		$this->shortcodes      = new Tripdesh_Shortcodes();
+		$this->demo_content    = new Tripdesh_Demo_Content();
 
 		add_action( 'init', array( $this, 'load_textdomain' ) );
 	}

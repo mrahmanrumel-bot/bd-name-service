@@ -1,0 +1,282 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tripdesh 1.0\n"
+"POT-Creation-Date: 2026-08-30\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bn_BD\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Sylhet's Tea Gardens"
+msgstr "সিলেটের চা-বাগান"
+
+msgid "Tell the assistant your starting point, dates, budget, and who you're travelling with — it will suggest destinations and tour packages we actually offer, and build a day-by-day plan. Booking still goes through a real person before you pay."
+msgstr "আপনার যাত্রা শুরুর স্থান, তারিখ, বাজেট এবং কাদের সাথে ভ্রমণ করছেন তা জানান — আমাদের প্রকৃত গন্তব্য ও ট্যুর প্যাকেজ অনুযায়ী পরামর্শ দেবে এবং দিনভিত্তিক পরিকল্পনা তৈরি করে দেবে। পেমেন্টের আগে বুকিং সবসময় আমাদের টিমের মাধ্যমে নিশ্চিত হয়।"
+
+msgid "%1$s days / %2$s nights"
+msgstr "%1$s দিন / %2$s রাত"
+
+msgid "%s / night"
+msgstr "%s / রাত"
+
+msgid "A real team confirms every booking before you pay."
+msgstr "পেমেন্টের আগে প্রতিটি বুকিং যাচাই করে আমাদের প্রকৃত টিম।"
+
+msgid "AI Trip Planner"
+msgstr "AI ট্রিপ প্ল্যানার"
+
+msgid "AI Trip Planning"
+msgstr "AI ভ্রমণ পরিকল্পনা"
+
+msgid "About Us"
+msgstr "আমাদের সম্পর্কে"
+
+msgid "Activities"
+msgstr "অভিজ্ঞতা"
+
+msgid "Add a contact form via a plugin (e.g. Contact Form 7) below this content block, or configure phone/email/WhatsApp under Settings → Tripdesh."
+msgstr "এই কনটেন্ট ব্লকের নিচে কোনো প্লাগইন (যেমন Contact Form 7) দিয়ে যোগাযোগ ফর্ম যুক্ত করুন, অথবা Settings → Tripdesh থেকে ফোন/ইমেইল/হোয়াটসঅ্যাপ সেট করুন।"
+
+msgid "Add a newsletter signup widget under Appearance → Widgets → Footer Column 1."
+msgstr "Appearance → Widgets → Footer Column 1 থেকে নিউজলেটার সাবস্ক্রিপশন উইজেট যুক্ত করুন।"
+
+msgid "Adventure Tours"
+msgstr "অ্যাডভেঞ্চার ট্যুর"
+
+msgid "All rights reserved."
+msgstr "সর্বস্বত্ব সংরক্ষিত।"
+
+msgid "Amenities"
+msgstr "সুযোগ-সুবিধা"
+
+msgid "Ask the AI to Plan a Trip Here"
+msgstr "AI দিয়ে এখানকার ভ্রমণ পরিকল্পনা করুন"
+
+msgid "Best Time to Visit"
+msgstr "ভ্রমণের সেরা সময়"
+
+msgid "Blog Sidebar"
+msgstr "ব্লগ সাইডবার"
+
+msgid "Breadcrumb"
+msgstr "পথনির্দেশনা"
+
+msgid "Cancellation Policy"
+msgstr "বাতিলকরণ নীতি"
+
+msgid "Chat with our AI Travel Assistant in Bangla or English and get a personalized plan."
+msgstr "বাংলা অথবা ইংরেজিতে আমাদের AI ভ্রমণ সহকারীর সাথে কথা বলুন এবং নিজের জন্য পরিকল্পনা তৈরি করুন।"
+
+msgid "Clear BDT pricing, no hidden fees."
+msgstr "স্বচ্ছ টাকার হিসাব, কোনো লুকানো খরচ নেই।"
+
+msgid "Company"
+msgstr "প্রতিষ্ঠান"
+
+msgid "Contact"
+msgstr "যোগাযোগ"
+
+msgid "Contact:"
+msgstr "যোগাযোগ:"
+
+msgid "Couple Packages"
+msgstr "কাপল প্যাকেজ"
+
+msgid "Day %d"
+msgstr "দিন %d"
+
+msgid "Day-by-Day Itinerary"
+msgstr "দিনভিত্তিক ভ্রমণ পরিকল্পনা"
+
+msgid "Deals"
+msgstr "অফার"
+
+msgid "Departs from %s"
+msgstr "%s থেকে যাত্রা শুরু"
+
+msgid "Destinations"
+msgstr "গন্তব্যসমূহ"
+
+msgid "Email"
+msgstr "ইমেইল"
+
+msgid "Email:"
+msgstr "ইমেইল:"
+
+msgid "Estimated budget: %s / person"
+msgstr "আনুমানিক বাজেট: %s / জনপ্রতি"
+
+msgid "Explore"
+msgstr "ঘুরে দেখুন"
+
+msgid "FAQ"
+msgstr "সচরাচর জিজ্ঞাসা"
+
+msgid "Family Tours"
+msgstr "পারিবারিক ট্যুর"
+
+msgid "Find the best travel experiences in Bangladesh, matched to your budget, time, and taste."
+msgstr "আপনার বাজেট, সময় ও পছন্দ অনুযায়ী বাংলাদেশের সেরা ভ্রমণ অভিজ্ঞতা খুঁজে নিন।"
+
+msgid "Food"
+msgstr "খাবার"
+
+msgid "Footer Column 1"
+msgstr "ফুটার কলাম ১"
+
+msgid "Footer Menu"
+msgstr "ফুটার মেনু"
+
+msgid "From %s / person"
+msgstr "%s থেকে শুরু / জনপ্রতি"
+
+msgid "Home"
+msgstr "হোম"
+
+msgid "Hotels"
+msgstr "হোটেল"
+
+msgid "How to Reach"
+msgstr "কীভাবে যাবেন"
+
+msgid "Human Support"
+msgstr "মানবিক সহায়তা"
+
+msgid "Local Experts"
+msgstr "স্থানীয় বিশেষজ্ঞ"
+
+msgid "Local Transportation"
+msgstr "স্থানীয় যাতায়াত"
+
+msgid "Menu"
+msgstr "মেনু"
+
+msgid "Newsletter"
+msgstr "নিউজলেটার"
+
+msgid "No tour packages listed yet for this destination."
+msgstr "এই গন্তব্যের জন্য এখনো কোনো ট্যুর প্যাকেজ যুক্ত করা হয়নি।"
+
+msgid "Not Included"
+msgstr "যা অন্তর্ভুক্ত নয়"
+
+msgid "Not sure where to go?"
+msgstr "কোথায় যাবেন বুঝতে পারছেন না?"
+
+msgid "Nothing found."
+msgstr "কিছু পাওয়া যায়নি।"
+
+msgid "Phone"
+msgstr "ফোন"
+
+msgid "Phone:"
+msgstr "ফোন:"
+
+msgid "Plan My Trip"
+msgstr "আমার ভ্রমণ পরিকল্পনা করুন"
+
+msgid "Policies"
+msgstr "নীতিমালা"
+
+msgid "Popular Destinations"
+msgstr "জনপ্রিয় গন্তব্য"
+
+msgid "Popular Tour Packages"
+msgstr "জনপ্রিয় ট্যুর প্যাকেজ"
+
+msgid "Primary Menu"
+msgstr "প্রধান মেনু"
+
+msgid "Primary"
+msgstr "প্রধান"
+
+msgid "Privacy Policy"
+msgstr "গোপনীয়তা নীতি"
+
+msgid "Read more"
+msgstr "আরও পড়ুন"
+
+msgid "Real knowledge of Bangladesh destinations, not generic packages."
+msgstr "বাংলাদেশের গন্তব্য সম্পর্কে প্রকৃত অভিজ্ঞতা, সাধারণ কোনো প্যাকেজ নয়।"
+
+msgid "Recommended Hotels"
+msgstr "প্রস্তাবিত হোটেল"
+
+msgid "Room Types"
+msgstr "রুমের ধরন"
+
+msgid "Safety Information"
+msgstr "নিরাপত্তা তথ্য"
+
+msgid "Seasonal offers and travel guides, straight to your inbox."
+msgstr "মৌসুমি অফার ও ভ্রমণ গাইড সরাসরি আপনার ইনবক্সে।"
+
+msgid "Skip to content"
+msgstr "মূল কনটেন্টে যান"
+
+msgid "Tell us your budget and dates — get a plan in seconds, in Bangla or English."
+msgstr "আপনার বাজেট ও তারিখ জানান — কয়েক সেকেন্ডে বাংলা অথবা ইংরেজিতে পরিকল্পনা পেয়ে যান।"
+
+msgid "Terms & Conditions"
+msgstr "শর্তাবলী"
+
+msgid "Things to Do"
+msgstr "যা করবেন"
+
+msgid "Tour Packages"
+msgstr "ট্যুর প্যাকেজ"
+
+msgid "Tours to this Destination"
+msgstr "এই গন্তব্যের ট্যুরসমূহ"
+
+msgid "Transparent Pricing"
+msgstr "স্বচ্ছ মূল্য নির্ধারণ"
+
+msgid "Transportation"
+msgstr "যাতায়াত"
+
+msgid "Travel Bangladesh, with Tripdesh"
+msgstr "বাংলাদেশ ঘুরুন, ট্রিপদেশের সাথে"
+
+msgid "Travel Guides"
+msgstr "ভ্রমণ গাইড"
+
+msgid "Travel to the Land of Tea"
+msgstr "চায়ের দেশে ভ্রমণ করুন"
+
+msgid "View all"
+msgstr "সব দেখুন"
+
+msgid "Weekend Trips"
+msgstr "উইকএন্ড ট্রিপ"
+
+msgid "What Travelers Say"
+msgstr "ভ্রমণকারীদের মতামত"
+
+msgid "What's Included"
+msgstr "যা অন্তর্ভুক্ত থাকছে"
+
+msgid "WhatsApp"
+msgstr "হোয়াটসঅ্যাপ"
+
+msgid "WhatsApp:"
+msgstr "হোয়াটসঅ্যাপ:"
+
+msgid "Where do you want to go?"
+msgstr "কোথায় যেতে চান?"
+
+msgid "Where to Stay"
+msgstr "কোথায় থাকবেন"
+
+msgid "Why Choose Tripdesh"
+msgstr "কেন ট্রিপদেশ বেছে নেবেন"
+
+msgid "Your trusted partner for exploring Bangladesh — Cox's Bazar, Sylhet, Bandarban, Sundarbans and beyond. Bengali & English support."
+msgstr "বাংলাদেশ ভ্রমণে আপনার বিশ্বস্ত সঙ্গী — কক্সবাজার, সিলেট, বান্দরবান, সুন্দরবনসহ আরও অনেক গন্তব্য। বাংলা ও ইংরেজি — দুই ভাষাতেই সহায়তা।"
+
+msgid "%s day"
+msgid_plural "%s days"
+msgstr[0] "%s দিন"
+msgstr[1] "%s দিন"
+

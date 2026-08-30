@@ -78,7 +78,7 @@ class Tripdesh_REST_Api {
 			return new WP_Error( 'tripdesh_message_too_long', __( 'Message is too long.', 'tripdesh' ), array( 'status' => 400 ) );
 		}
 
-		$language = isset( $params['language'] ) ? sanitize_text_field( $params['language'] ) : 'en';
+		$language = isset( $params['language'] ) ? sanitize_text_field( $params['language'] ) : 'bn';
 		$history  = isset( $params['history'] ) && is_array( $params['history'] ) ? $params['history'] : array();
 
 		$result = $this->ai_concierge->respond( $message, $language, $history );

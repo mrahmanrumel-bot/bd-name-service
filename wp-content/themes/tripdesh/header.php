@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				tripdesh_fallback_menu();
 			}
 			?>
-			<a class="tripdesh-nav__cta" href="<?php echo esc_url( home_url( '/ai-trip-planner/' ) ); ?>"><?php esc_html_e( 'Plan with AI', 'tripdesh' ); ?></a>
+			<a class="tripdesh-nav__cta" href="<?php echo esc_url( home_url( '/ai-trip-planner/' ) ); ?>"><?php esc_html_e( 'Plan My Trip', 'tripdesh' ); ?></a>
 		</nav>
 	</div>
 </header>

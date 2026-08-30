@@ -147,6 +147,9 @@ class Tripdesh_Settings {
 
 				<?php submit_button(); ?>
 			</form>
+
+			<hr />
+			<?php Tripdesh_Demo_Content::render_button(); ?>
 		</div>
 		<?php
 	}

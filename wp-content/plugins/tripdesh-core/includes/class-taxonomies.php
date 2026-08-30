@@ -63,13 +63,20 @@ class Tripdesh_Taxonomies {
 	/**
 	 * Seeds the tour_type taxonomy with the four tiers from the brief, if
 	 * they don't already exist. Safe to call multiple times.
+	 *
+	 * Term names are written directly in Bengali (not run through __())
+	 * because taxonomy terms are stored content, not UI chrome — a __()
+	 * call here would only capture whatever locale was active at the
+	 * moment the term was inserted (usually wp-admin's locale), not
+	 * translate dynamically per visitor the way template strings do.
+	 * Slugs stay in English for clean, stable URLs.
 	 */
 	public static function seed_default_terms(): void {
 		$tiers = array(
-			'budget'   => __( 'Budget', 'tripdesh' ),
-			'standard' => __( 'Standard', 'tripdesh' ),
-			'premium'  => __( 'Premium', 'tripdesh' ),
-			'luxury'   => __( 'Luxury', 'tripdesh' ),
+			'budget'   => 'বাজেট',
+			'standard' => 'স্ট্যান্ডার্ড',
+			'premium'  => 'প্রিমিয়াম',
+			'luxury'   => 'লাক্সারি',
 		);
 		foreach ( $tiers as $slug => $name ) {
 			if ( ! term_exists( $slug, 'tour_type' ) ) {
@@ -78,12 +85,12 @@ class Tripdesh_Taxonomies {
 		}
 
 		$styles = array(
-			'family'    => __( 'Family', 'tripdesh' ),
-			'couple'    => __( 'Couple', 'tripdesh' ),
-			'solo'      => __( 'Solo', 'tripdesh' ),
-			'group'     => __( 'Group', 'tripdesh' ),
-			'adventure' => __( 'Adventure', 'tripdesh' ),
-			'weekend'   => __( 'Weekend', 'tripdesh' ),
+			'family'    => 'পারিবারিক',
+			'couple'    => 'কাপল',
+			'solo'      => 'একক ভ্রমণ',
+			'group'     => 'গ্রুপ',
+			'adventure' => 'অ্যাডভেঞ্চার',
+			'weekend'   => 'উইকএন্ড',
 		);
 		foreach ( $styles as $slug => $name ) {
 			if ( ! term_exists( $slug, 'travel_style' ) ) {

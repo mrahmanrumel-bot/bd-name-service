@@ -98,10 +98,14 @@ function tripdesh_fallback_menu(): void {
 	$links = array(
 		home_url( '/' )                      => __( 'Home', 'tripdesh' ),
 		home_url( '/destinations/' )         => __( 'Destinations', 'tripdesh' ),
-		home_url( '/tours/' )                => __( 'Tours', 'tripdesh' ),
+		home_url( '/tours/' )                => __( 'Tour Packages', 'tripdesh' ),
 		home_url( '/hotels/' )               => __( 'Hotels', 'tripdesh' ),
+		home_url( '/transportation/' )       => __( 'Transportation', 'tripdesh' ),
+		home_url( '/activities/' )           => __( 'Activities', 'tripdesh' ),
 		home_url( '/blog/' )                 => __( 'Travel Guides', 'tripdesh' ),
+		home_url( '/deals/' )                => __( 'Deals', 'tripdesh' ),
 		home_url( '/ai-trip-planner/' )      => __( 'AI Trip Planner', 'tripdesh' ),
+		home_url( '/about/' )                => __( 'About Us', 'tripdesh' ),
 		home_url( '/contact/' )              => __( 'Contact', 'tripdesh' ),
 	);
 	echo '<ul class="tripdesh-nav__menu">';

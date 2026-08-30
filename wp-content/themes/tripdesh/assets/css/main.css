@@ -53,6 +53,7 @@ h3 { font-size: 1.15rem; }
 
 .tripdesh-section { padding: 48px 0; }
 .tripdesh-section--alt { background: var(--tripdesh-bg-alt); }
+.tripdesh-section--tea { background: #eef6ec; }
 .tripdesh-section--narrow { max-width: 820px; }
 
 .tripdesh-section__header {
@@ -199,6 +200,7 @@ h3 { font-size: 1.15rem; }
 }
 .tripdesh-hero__title { color: #fff; margin-bottom: 12px; }
 .tripdesh-hero__subtitle { color: rgba(255,255,255,0.85); max-width: 620px; margin-bottom: 28px; }
+.tripdesh-hero__search-heading { color: #fff; font-size: 1.1rem; margin-bottom: 12px; }
 
 .tripdesh-search {
 	background: #fff;
@@ -210,12 +212,15 @@ h3 { font-size: 1.15rem; }
 }
 .tripdesh-search__field { display: flex; flex-direction: column; gap: 4px; }
 .tripdesh-search__field label { font-size: 0.8rem; font-weight: 600; color: var(--tripdesh-muted); }
-.tripdesh-search input {
+.tripdesh-search input,
+.tripdesh-search select {
 	padding: 10px 12px;
 	border: 1px solid var(--tripdesh-border);
 	border-radius: 8px;
 	font-size: 1rem;
 	color: var(--tripdesh-ink);
+	background: #fff;
+	font-family: inherit;
 }
 .tripdesh-search__submit {
 	background: var(--tripdesh-accent);
@@ -230,7 +235,10 @@ h3 { font-size: 1.15rem; }
 .tripdesh-search__submit:hover { background: var(--tripdesh-accent-dark); }
 
 @media (min-width: 720px) {
-	.tripdesh-search { grid-template-columns: repeat(4, 1fr) auto; align-items: end; }
+	.tripdesh-search { grid-template-columns: repeat(2, 1fr) auto; align-items: end; }
+}
+@media (min-width: 1000px) {
+	.tripdesh-search { grid-template-columns: repeat(5, 1fr) auto; align-items: end; }
 }
 
 /* Cards */
