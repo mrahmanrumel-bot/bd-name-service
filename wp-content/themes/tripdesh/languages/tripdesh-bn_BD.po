@@ -242,8 +242,14 @@ msgstr "বাংলাদেশ ঘুরুন, ট্রিপদেশের
 msgid "Travel Guides"
 msgstr "ভ্রমণ গাইড"
 
-msgid "Travel to the Land of Tea"
-msgstr "চায়ের দেশে ভ্রমণ করুন"
+msgid "Explore Sylhet's Tea Gardens"
+msgstr "সিলেটের চা-বাগানে ঘুরে আসুন"
+
+msgid "Deal"
+msgstr "অফার"
+
+msgid "No active deals right now — check back soon."
+msgstr "এখন কোনো চলমান অফার নেই — শীঘ্রই আবার দেখুন।"
 
 msgid "View all"
 msgstr "সব দেখুন"

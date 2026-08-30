@@ -51,7 +51,10 @@ class Tripdesh_Booking {
 		$travel_date = isset( $data['travel_date'] ) ? sanitize_text_field( $data['travel_date'] ) : '';
 		$notes       = isset( $data['notes'] ) ? sanitize_textarea_field( $data['notes'] ) : '';
 
-		$unit_price  = (float) get_post_meta( $product_id, '_tripdesh_price', true );
+		$list_price = (float) get_post_meta( $product_id, '_tripdesh_price', true );
+		$sale_price = (float) get_post_meta( $product_id, '_tripdesh_sale_price', true );
+		$unit_price = ( $sale_price > 0 && $sale_price < $list_price ) ? $sale_price : $list_price;
+
 		$total_price = $unit_price * $travelers;
 
 		$reference = $this->generate_reference();

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Optional, admin-triggered Bangla destination seeding (brief: "Use
- * professional Bengali names" for the 21 core destinations, plus a
+ * professional Bengali names" for the 25 core destinations, plus a
  * featured Sylhet tea-garden collection). Never runs automatically —
  * only from the button on Settings → Tripdesh — and is idempotent: any
  * destination whose slug already exists is left untouched, so running it
@@ -22,10 +22,13 @@ class Tripdesh_Demo_Content {
 	public static function destinations(): array {
 		return array(
 			'coxs-bazar'  => array( 'কক্সবাজার', 'বিশ্বের দীর্ঘতম প্রাকৃতিক সমুদ্রসৈকত — বাংলাদেশের সবচেয়ে জনপ্রিয় সমুদ্র ভ্রমণ গন্তব্য।', false ),
+			'saint-martin' => array( 'সেন্টমার্টিন দ্বীপ', 'বাংলাদেশের একমাত্র প্রবাল দ্বীপ — নীল জল, সাদা বালু আর নারকেল গাছের সারি নিয়ে এক স্বপ্নের গন্তব্য।', false ),
 			'sylhet'      => array( 'সিলেট', 'সবুজ চা-বাগান, পাহাড় আর ঝর্নার শহর — প্রকৃতিপ্রেমীদের প্রিয় গন্তব্য।', true ),
 			'srimangal'   => array( 'শ্রীমঙ্গল', 'বাংলাদেশের চা-রাজধানী, বিস্তীর্ণ চা-বাগান ও লাউয়াছড়া জাতীয় উদ্যানের জন্য বিখ্যাত।', true ),
 			'jaflong'     => array( 'জাফলং', 'পাহাড়, নদী আর পাথরের অপূর্ব মিলনস্থল, সিলেটের অন্যতম দর্শনীয় স্থান।', true ),
 			'ratargul'    => array( 'রাতারগুল', 'বাংলাদেশের একমাত্র জলাবন — নৌকায় ঘুরে দেখার মতো এক অনন্য অভিজ্ঞতা।', true ),
+			'bichanakandi' => array( 'বিছানাকান্দি', 'স্বচ্ছ পাথুরে জল আর পাহাড়ের সারি নিয়ে গঠিত সিলেটের এক লাবণ্যময় পাথর-কোয়ারি এলাকা।', true ),
+			'madhabkunda' => array( 'মাধবকুণ্ড', 'বাংলাদেশের সবচেয়ে বড় ঝর্নাগুলোর একটি — মৌলভীবাজারের গভীর অরণ্যে অবস্থিত এক নয়নাভিরাম জলপ্রপাত।', true ),
 			'sunamganj'   => array( 'সুনামগঞ্জ', 'হাওর অঞ্চলের প্রবেশদ্বার, টাঙ্গুয়ার হাওরে যাওয়ার প্রধান পথ।', false ),
 			'tanguar-haor' => array( 'টাঙ্গুয়ার হাওর', 'বিশাল জলরাশি ও পরিযায়ী পাখির অভয়ারণ্য, নৌকা ভ্রমণের জন্য আদর্শ।', false ),
 			'bandarban'   => array( 'বান্দরবান', 'উঁচু পাহাড়, মেঘের রাজ্য আর আদিবাসী সংস্কৃতির অপূর্ব সমন্বয়।', false ),
@@ -42,6 +45,7 @@ class Tripdesh_Demo_Content {
 			'mymensingh'  => array( 'ময়মনসিংহ', 'ব্রহ্মপুত্র নদের তীরে ঐতিহ্যবাহী শহর, প্রকৃতি ও ইতিহাসের সমন্বয়।', false ),
 			'gazipur'     => array( 'গাজীপুর', 'ঢাকার কাছে সবুজ প্রকৃতি, রিসোর্ট ও ভাওয়াল জাতীয় উদ্যানের জন্য পরিচিত।', false ),
 			'tangail'     => array( 'টাঙ্গাইল', 'তাঁতশিল্প ও ঐতিহ্যবাহী শাড়ির জন্য বিখ্যাত, মধুপুর বনের কাছাকাছি এক জেলা।', false ),
+			'bogura'      => array( 'বগুড়া', 'মহাস্থানগড়সহ প্রাচীন প্রত্নতাত্ত্বিক নিদর্শন আর ঐতিহ্যবাহী দই-এর জন্য বিখ্যাত উত্তরবঙ্গের এক জেলা।', false ),
 		);
 	}
 
@@ -54,7 +58,7 @@ class Tripdesh_Demo_Content {
 		?>
 		<h2><?php esc_html_e( 'Bangla Demo Content', 'tripdesh' ); ?></h2>
 		<p class="description">
-			<?php esc_html_e( 'Creates the 21 core Bangladesh destinations (Bengali titles, English URL slugs) if they do not already exist, and tags the Sylhet tea-garden group for the homepage featured section. Safe to run more than once — existing destinations (matched by slug) are never modified or duplicated.', 'tripdesh' ); ?>
+			<?php esc_html_e( 'Creates the 25 core Bangladesh destinations (Bengali titles, English URL slugs) if they do not already exist, and tags the Sylhet tea-garden group for the homepage featured section. Safe to run more than once — existing destinations (matched by slug) are never modified or duplicated.', 'tripdesh' ); ?>
 		</p>
 		<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
 			<?php wp_nonce_field( self::ACTION ); ?>

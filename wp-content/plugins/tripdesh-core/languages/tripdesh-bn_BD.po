@@ -98,8 +98,8 @@ msgstr "যোগাযোগের ফোন নম্বর"
 msgid "Could not create the booking. Please try again."
 msgstr "বুকিং তৈরি করা যায়নি। আবার চেষ্টা করুন।"
 
-msgid "Creates the 21 core Bangladesh destinations (Bengali titles, English URL slugs) if they do not already exist, and tags the Sylhet tea-garden group for the homepage featured section. Safe to run more than once — existing destinations (matched by slug) are never modified or duplicated."
-msgstr "বাংলাদেশের ২১টি মূল গন্তব্য (বাংলা শিরোনাম, ইংরেজি URL স্লাগসহ) তৈরি করে, যদি সেগুলো আগে থেকে না থাকে, এবং হোমপেজের ফিচার্ড সেকশনের জন্য সিলেটের চা-বাগান গ্রুপ ট্যাগ করে দেয়। একাধিকবার চালানো নিরাপদ — বিদ্যমান গন্তব্য (স্লাগ অনুযায়ী মিলিয়ে) কখনও পরিবর্তন বা ডুপ্লিকেট করা হয় না।"
+msgid "Creates the 25 core Bangladesh destinations (Bengali titles, English URL slugs) if they do not already exist, and tags the Sylhet tea-garden group for the homepage featured section. Safe to run more than once — existing destinations (matched by slug) are never modified or duplicated."
+msgstr "বাংলাদেশের ২৫টি মূল গন্তব্য (বাংলা শিরোনাম, ইংরেজি URL স্লাগসহ) তৈরি করে, যদি সেগুলো আগে থেকে না থাকে, এবং হোমপেজের ফিচার্ড সেকশনের জন্য সিলেটের চা-বাগান গ্রুপ ট্যাগ করে দেয়। একাধিকবার চালানো নিরাপদ — বিদ্যমান গন্তব্য (স্লাগ অনুযায়ী মিলিয়ে) কখনও পরিবর্তন বা ডুপ্লিকেট করা হয় না।"
 
 msgid "Currency"
 msgstr "মুদ্রা"
@@ -112,6 +112,9 @@ msgstr "গ্রাহক মূল্য (টাকা, জনপ্রতি)
 
 msgid "Customer"
 msgstr "গ্রাহক"
+
+msgid "Deal / Sale Price (BDT, optional — leave blank if not on offer)"
+msgstr "অফার মূল্য (টাকা, ঐচ্ছিক — অফার না থাকলে খালি রাখুন)"
 
 msgid "Day-by-Day Itinerary"
 msgstr "দিনভিত্তিক ভ্রমণ পরিকল্পনা"

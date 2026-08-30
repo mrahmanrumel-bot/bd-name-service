@@ -111,14 +111,22 @@ class Tripdesh_Shortcodes {
 		}
 
 		wp_enqueue_script( 'tripdesh-shortcodes' );
-		$price    = get_post_meta( $product_id, '_tripdesh_price', true );
-		$currency = Tripdesh_Core::instance()->settings->get( 'currency', 'BDT' );
+		$price      = get_post_meta( $product_id, '_tripdesh_price', true );
+		$sale_price = get_post_meta( $product_id, '_tripdesh_sale_price', true );
+		$currency   = Tripdesh_Core::instance()->settings->get( 'currency', 'BDT' );
+		$on_sale    = $sale_price && $price && (float) $sale_price < (float) $price;
 
 		ob_start();
 		?>
 		<form class="tripdesh-booking-form" id="tripdesh-booking-form" data-product-id="<?php echo esc_attr( $product_id ); ?>">
 			<h3><?php esc_html_e( 'Request to Book', 'tripdesh' ); ?></h3>
-			<?php if ( $price ) : ?>
+			<?php if ( $on_sale ) : ?>
+				<p class="tripdesh-booking-form__price">
+					<s class="tripdesh-booking-form__price--was"><?php echo esc_html( number_format_i18n( (float) $price ) . ' ' . $currency ); ?></s>
+					<?php echo esc_html( number_format_i18n( (float) $sale_price ) . ' ' . $currency ); ?>
+					<span><?php esc_html_e( 'per person', 'tripdesh' ); ?></span>
+				</p>
+			<?php elseif ( $price ) : ?>
 				<p class="tripdesh-booking-form__price"><?php echo esc_html( number_format_i18n( (float) $price ) . ' ' . $currency ); ?> <span><?php esc_html_e( 'per person', 'tripdesh' ); ?></span></p>
 			<?php endif; ?>
 			<div class="tripdesh-booking-form__row">

@@ -42,6 +42,7 @@ class Tripdesh_Meta_Boxes {
 				'duration_days'      => array( __( 'Duration (days)', 'tripdesh' ), 'number' ),
 				'duration_nights'    => array( __( 'Duration (nights)', 'tripdesh' ), 'number' ),
 				'price'              => array( __( 'Customer Price (BDT, per person)', 'tripdesh' ), 'number' ),
+				'sale_price'         => array( __( 'Deal / Sale Price (BDT, optional — leave blank if not on offer)', 'tripdesh' ), 'number' ),
 				'supplier_price'     => array( __( 'Supplier Price (BDT, internal)', 'tripdesh' ), 'number' ),
 				'departure_location' => array( __( 'Departure Location', 'tripdesh' ), 'text' ),
 				'max_travelers'      => array( __( 'Max Travelers per Booking', 'tripdesh' ), 'number' ),

@@ -21,7 +21,15 @@ what to do on an already-installed site.
 wp-content/
   themes/tripdesh/          Front-end theme
   plugins/tripdesh-core/    Data model, booking, AI concierge, SEO
+deploy/
+  HOSTINGER.md               Automated deployment to Hostinger via Git + Cron
+  hostinger-sync.sh           The script that cron job runs
 ```
+
+**Deploying to Hostinger?** See [deploy/HOSTINGER.md](deploy/HOSTINGER.md)
+for a one-time setup that makes future pushes to this branch reach your
+live site automatically, with no manual ZIP upload. Manual installation
+(below) always works too and needs no setup.
 
 No build step, no Docker, no bundler — plain PHP/CSS/JS you copy onto a
 WordPress installation.
@@ -64,13 +72,23 @@ WordPress installation.
      page, and a `tour_type` term (Budget/Standard/Premium/Luxury)
    - **Hotels**, **Activities**, **Transportation**, **Testimonials**
 10. Create pages using the page templates under **Page Attributes → Template**:
-    - "About" → `template-about.php`
-    - "Contact" → `template-contact.php`
-    - "FAQ" → `template-faq.php` (write questions as H3 headings
-      immediately followed by a paragraph answer — the schema output
-      parses that pattern automatically)
-    - "AI Trip Planner" → `template-ai-trip-planner.php`
-11. Under Appearance → Menus, create a "Primary Menu" and assign it to the
+    - "About" (slug `about`) → `template-about.php`
+    - "Contact" (slug `contact`) → `template-contact.php`
+    - "FAQ" (slug `faq`) → `template-faq.php` (write questions as H3
+      headings immediately followed by a paragraph answer — the schema
+      output parses that pattern automatically)
+    - "AI Trip Planner" (slug `ai-trip-planner`) → `template-ai-trip-planner.php`
+    - "Deals" (slug `deals`) → `template-deals.php` (auto-lists any tour
+      package that has a Deal/Sale Price set — no separate page content
+      is required, but you can add an intro paragraph)
+11. Create three plain pages (default template is fine) at slugs
+    `privacy-policy`, `terms-and-conditions`, and `cancellation-policy` —
+    the footer already links to them. Get the legal wording reviewed
+    before publishing; don't ship placeholder legal text as final.
+12. Create a page titled "Blog" at slug `blog` and set it as **Settings →
+    Reading → Posts page**, so `/blog/` shows your travel-guide posts (the
+    nav and homepage already link there).
+13. Under Appearance → Menus, create a "Primary Menu" and assign it to the
     "Primary Menu" location (the theme falls back to a sensible default
     nav if you skip this).
 

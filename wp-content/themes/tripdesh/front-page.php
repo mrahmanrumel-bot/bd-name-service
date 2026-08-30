@@ -51,7 +51,7 @@ $weekend_tours   = get_posts( array( 'post_type' => 'tour_package', 'posts_per_p
 		<div class="tripdesh-section__header">
 			<div>
 				<span class="tripdesh-badge"><?php esc_html_e( "Sylhet's Tea Gardens", 'tripdesh' ); ?></span>
-				<h2><?php esc_html_e( 'Travel to the Land of Tea', 'tripdesh' ); ?></h2>
+				<h2><?php esc_html_e( "Explore Sylhet's Tea Gardens", 'tripdesh' ); ?></h2>
 			</div>
 		</div>
 		<div class="tripdesh-card-grid">

@@ -235,3 +235,18 @@ Until then, one well-scoped endpoint beats twelve speculative ones.
   the AI endpoint; put a real WAF/rate limiter in front in production.
 - No raw card data is ever handled by this codebase — by design, per §9,
   payment happens on the gateway's hosted page.
+
+## 12. Deployment
+
+Manual install: copy `wp-content/themes/tripdesh` and
+`wp-content/plugins/tripdesh-core` onto any WP host (§ Installation in
+README.md), or upload the two installable ZIPs through WP Admin.
+
+Automated deployment to Hostinger: see `deploy/HOSTINGER.md`. Hostinger's
+own Git integration (hPanel → Advanced → Git) pulls this repo into a
+staging directory outside the web root, and a Hostinger Cron Job runs
+`deploy/hostinger-sync.sh`, which `rsync --delete`s only the theme and
+plugin folders into the live WordPress install — never `wp-config.php`,
+the database, or any other plugin/theme. No GitHub secrets or credentials
+of any kind live in this repo; the Git connection and any deploy key are
+configured entirely inside Hostinger's own hPanel UI.

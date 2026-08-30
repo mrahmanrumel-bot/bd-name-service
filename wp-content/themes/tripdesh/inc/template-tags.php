@@ -30,15 +30,21 @@ function tripdesh_render_card( WP_Post $post ): void {
 	$type = $post->post_type;
 	$meta_line = '';
 
+	$on_sale = false;
+
 	if ( 'tour_package' === $type ) {
-		$days  = tripdesh_meta( $post->ID, 'duration_days' );
-		$price = tripdesh_meta( $post->ID, 'price' );
-		$parts = array();
+		$days       = tripdesh_meta( $post->ID, 'duration_days' );
+		$price      = tripdesh_meta( $post->ID, 'price' );
+		$sale_price = tripdesh_meta( $post->ID, 'sale_price' );
+		$on_sale    = $sale_price && $price && (float) $sale_price < (float) $price;
+		$parts      = array();
 		if ( $days ) {
 			/* translators: %s: number of days */
 			$parts[] = sprintf( _n( '%s day', '%s days', (int) $days, 'tripdesh' ), $days );
 		}
-		if ( $price ) {
+		if ( $on_sale ) {
+			$parts[] = '<s>' . tripdesh_price( $price ) . '</s> ' . tripdesh_price( $sale_price );
+		} elseif ( $price ) {
 			$parts[] = tripdesh_price( $price );
 		}
 		$meta_line = implode( ' &middot; ', $parts );
@@ -71,6 +77,9 @@ function tripdesh_render_card( WP_Post $post ): void {
 			<?php endif; ?>
 		</div>
 		<div class="tripdesh-card__body">
+			<?php if ( $on_sale ) : ?>
+				<span class="tripdesh-badge tripdesh-badge--sale"><?php esc_html_e( 'Deal', 'tripdesh' ); ?></span>
+			<?php endif; ?>
 			<h3 class="tripdesh-card__title"><?php echo esc_html( get_the_title( $post ) ); ?></h3>
 			<?php if ( $meta_line ) : ?>
 				<p class="tripdesh-card__meta"><?php echo wp_kses_post( $meta_line ); ?></p>
@@ -78,6 +87,15 @@ function tripdesh_render_card( WP_Post $post ): void {
 		</div>
 	</a>
 	<?php
+}
+
+/**
+ * True when a tour package has a valid, lower sale_price set.
+ */
+function tripdesh_is_on_sale( int $post_id ): bool {
+	$price      = tripdesh_meta( $post_id, 'price' );
+	$sale_price = tripdesh_meta( $post_id, 'sale_price' );
+	return (bool) ( $sale_price && $price && (float) $sale_price < (float) $price );
 }
 
 function tripdesh_render_itinerary( array $days ): void {
