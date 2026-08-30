@@ -1,18 +1,4 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# Editor / OS
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,3 +8,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Logs
+*.log
+
+# Local WordPress install (if you run one alongside this repo for testing)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/wp-config.php
+!/wp-content/themes/tripdesh/
+!/wp-content/plugins/tripdesh-core/

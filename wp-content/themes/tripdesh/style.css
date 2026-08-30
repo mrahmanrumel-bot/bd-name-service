@@ -1,0 +1,15 @@
+/*
+Theme Name: Tripdesh
+Theme URI: https://github.com/mrahmanrumel-bot/bd-name-service
+Author: Tripdesh
+Description: Custom theme for Tripdesh, a Bangladesh domestic travel agency (OTA). Pairs with the tripdesh-core plugin for destinations, tours, hotels, bookings, and the AI concierge. Mobile-first, SEO-ready.
+Version: 1.0.0
+Requires at least: 5.9
+Requires PHP: 7.4
+Text Domain: tripdesh
+*/
+
+/* Actual styling lives in assets/css/main.css, enqueued in functions.php.
+   This file exists so WordPress recognizes the theme (style.css header is
+   required); keeping styles in a separate file avoids WP's inline-editor
+   quirks around this file and makes it easier to split into partials later. */
